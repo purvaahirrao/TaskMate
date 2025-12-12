@@ -93,7 +93,7 @@ app.use((req,res,next)=>{
 // })
 
 app.get("/", (req, res) => {
-    res.redirect("/List");
+    res.redirect("/login");
 });
 
 app.use("/List",ListsRouter);
