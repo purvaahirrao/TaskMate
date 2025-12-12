@@ -23,7 +23,8 @@ const {listSchema}=require("./Schema.js");
 const ListsRouter=require("./routes/Lists.js");
 const userRouter=require("./routes/user.js");
 
-const MongoUrl="mongodb://127.0.0.1:27017/SemProj";
+// const MongoUrl="mongodb://127.0.0.1:27017/SemProj";
+dbUrl=process.env.ATLAS_DB_URL;
 main().then(()=>{
     console.log("connected to DB");
 }).catch(err=>{
@@ -31,7 +32,7 @@ main().then(()=>{
 });
 
 async function main(){
-    await mongoose.connect(MongoUrl);
+    await mongoose.connect(dbUrl);
 }
 
 app.set("view engine","ejs");
