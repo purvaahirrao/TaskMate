@@ -61,9 +61,7 @@ const sessionOptions={
 
 };
 
-// app.get("/",(req,res)=>{
-// res.send("Hi ,I am Front");
-// });
+
 
 
 app.use(session(sessionOptions));
@@ -94,6 +92,9 @@ app.use((req,res,next)=>{
 //     res.send(registerUser);
 // })
 
+app.get("/", (req, res) => {
+    res.redirect("/List");
+});
 
 app.use("/List",ListsRouter);
 app.use("/",userRouter);
