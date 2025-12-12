@@ -83,7 +83,7 @@ if(!List)
      return res.redirect("/List");
 }
 
-res.render("List/show.ejs",{List});
+res.render("list/show.ejs",{List});
 }));
 
 // Create Route

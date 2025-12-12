@@ -51,7 +51,7 @@ document.querySelectorAll('.complete-btn').forEach(button => {
       const data = await res.json();
 
       if (data.success) {
-        // ✅ Update button color and text dynamically
+        // Update button color and text 
         if (data.completed) {
           this.style.backgroundColor = '#C9D892';
           this.textContent = 'Completed';
@@ -60,7 +60,7 @@ document.querySelectorAll('.complete-btn').forEach(button => {
           this.textContent = 'Complete';
         }
 
-        // ✅ Update the counter in header dynamically
+        // Update the counter in header 
         const counterDisplay = document.querySelector(".header .completed-count");
         if (counterDisplay && data.completedCount !== undefined) {
           counterDisplay.textContent = data.completedCount;
