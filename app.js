@@ -50,7 +50,7 @@ app.use(methodOverride("_method"));
 
 
 const sessionOptions={
-    secret:"mysupersecretcode",
+    secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
     cookie:{
