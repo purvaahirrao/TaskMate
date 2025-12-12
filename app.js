@@ -61,9 +61,9 @@ const sessionOptions={
 
 };
 
-app.get("/",(req,res)=>{
-res.send("Hi ,I am Front");
-});
+// app.get("/",(req,res)=>{
+// res.send("Hi ,I am Front");
+// });
 
 
 app.use(session(sessionOptions));
