@@ -1,0 +1,39 @@
+ <nav class="sticky-nav">
+                <div class="nav-icons">
+             <i class="fa-solid fa-circle-chevron-left"></i>
+               <i class="fa-solid fa-circle-chevron-right hide"></i>
+                </div>
+          
+                
+                 
+                <div class="st-nav-options navbar bg-body-tertiary ">
+                  <div class="search">
+                    <form action="/List/search" method="get">
+                
+                     <div style="display:flex; flex-direction: row;">
+                       
+                      <input name="q" class="form-control me-2" id="minn" type="search" placeholder="Search"  aria-label="Search"/>
+                       <label for="search" > <button type="submit" class="badge nav-item hide"><i class="fa-solid fa-magnifying-glass"></i></button></label>
+                     
+                    </div>
+                 </form>
+                  </div>
+                 <div class="home-opt">
+                     <a href="/List" ><button class="badge nav-item hide"><i class="fa-solid fa-house"></i>Home</button></a>
+                     </div>
+                <% if(!currUser){%>
+                   
+                <a href="/login"><button  class="badge nav-item d-badge hide">Login</button></a>
+                &nbsp; 
+                <a href="/signup"><button  class="badge nav-item d-badge hide">Signup</button></a>
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+                <%}%>
+                 <% if(currUser){%>
+                  &nbsp;
+                 <a href="/logout"><button  class="badge nav-item d-badge hide">Logout<i class="fa-solid fa-right-to-bracket"></i></button></a>
+                  &nbsp; &nbsp;
+           <a class="profile" href="#"> <i class="fa-solid fa-user"></i></a>
+             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <%}%>
+                </div>
+                </nav>

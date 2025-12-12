@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMate - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page"></body>
+  <div class="container">
+    <h2>TaskMate</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter Name" required>
+      <input type="email" id="email" placeholder="Enter Email" required>
+      
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁</span>
+      </div>
+      
+      <button type="submit">Login</button>
+      <p><a href="#" onclick="forgotPassword()">Forgot Password?</a></p>
+      <p>Don’t have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

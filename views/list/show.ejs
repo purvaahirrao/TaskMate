@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+   <body>
+     
+      <div class=" row mt-3 sh">
+         <div class="col-8 offset-2 showCon">
+    <h3>Task details: </h3>
+    <ul>
+        <li><b>Task:</b> <%=List.title%></li>
+        <br>
+        <li><b>Description:</b> <%=List.description%></li>
+        <li>
+  <b>Due Date:</b>
+  <% if (List.duedate) { %>
+    <%= List.duedate.toISOString().split('T')[0] %>
+  <% } else { %>
+    Not specified
+  <% } %>
+</li>
+    </ul>
+    <br><br>
+    <div class=" gap-2 col-6 " id="formi" style="display: flex;justify-content: center;">
+     <form method="post"  action="/List/<%=List._id %>?_method=DELETE">
+
+
+     <button class="btn btn-outline-dark col-6 Delete" 
+     type="submit" style="padding:0.3rem 0.1rem 0.3rem 0.1rem;width:6rem;color: black;">
+     Delete</button>
+ 
+   
+    </form>
+    <a href="/List/<%= List._id %>/edit" style=" text-decoration: none;">
+    <button class="btn btn-outline-dark Update">Update</button></a>
+    </div>
+ </div>
+   </div>
+  
+   </body>
+   

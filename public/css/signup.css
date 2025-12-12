@@ -1,0 +1,159 @@
+/* Default body (dashboard or other pages) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Only login & signup pages get background image */
+body.auth-page {
+  background: url("https://img.freepik.com/premium-photo/pencil-checking-off-todo-list_671359-65.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Transparent overlay only for auth pages */
+body.auth-page::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255,0.3); /* adjust transparency */
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.982);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 300px;
+}
+
+
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 95%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.533);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: black;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 35%;
+  cursor: pointer;
+}
+/* Full screen center */
+body {
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Heading */
+.logo {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 10px 0;
+  color: #333;
+}
+
+h3 {
+  color: #444;
+  margin: 5px 0;
+}
+
+p {
+  margin: 15px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Option buttons */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.option-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  text-align: left;
+  color: #333;              /* ✅ make text visible */
+}
+
+.option-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Next button */
+.next-btn {
+  background: #6ecbff;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  background: #5ab2e2;
+}

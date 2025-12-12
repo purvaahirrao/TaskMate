@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+<h2 class="text-center mt-4">Your Task Calendar</h2>
+
+<!-- Calendar container -->
+<div id="calendar" class="m-4"></div>
+
+<script src="/static/fullcalendar/index.global.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Step 1: Get the calendar container
+    const calendarEl = document.getElementById('calendar');
+
+    // Step 2: Create a FullCalendar instance
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',   // Show month view by default
+      height: 'auto',                // Adjust height automatically
+      headerToolbar: {               // Toolbar buttons
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,listWeek'
+      },
+
+      // Step 3: Load your tasks as events
+      events: <%- JSON.stringify(events) %>,
+
+      // Optional Step 4: Add interaction (click an event)
+      eventClick: function(info) {
+        alert(`Task: ${info.event.title}\nDue: ${info.event.start.toDateString()}`);
+      }
+    });
+
+    // Step 5: Render the calendar
+    calendar.render();
+  });
+</script>
+</body>

@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+     
+     <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <h3>Edit your Task</h3>
+    <form method="post" action="/List/<%=List._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label" >Task: </label>
+      <input type="text" name="list[title]" class="form-control" value="<%= List.title%>" required>
+        <div class="valid-feedback">You can do this task!! Keep it up</div>
+       <div class="invalid-feedback">Add a valid task!!</div>
+      </div>
+     <div class="mb-3">
+      <label for="description" class="form-label" >Description: </label>
+        <textarea name="list[description]" class="form-control" row="4" required><%=List.description%></textarea>
+         <div class="valid-feedback">looks Good!!</div>
+       <div class="invalid-feedback"> Please write short discription!!</div>
+     </div>
+
+     <div class="mb-3">
+      Original Image:<br>
+      <img src="<%=originalImageUrl%>" height="150" width="140"/>
+     </div>
+       <div class="mb-3">
+        <label for="image" class="form-label" >Upload New Image: </label>
+       <input type="file" name="list[image]" 
+       class="form-control"  >
+       <div class="valid-feedback">You can do this task!!</div>
+       <div class="invalid-feedback">Please add image!!</div>
+       </div>
+       <div class="mb-3">
+       <label for="duedate" class="form-label" >Enter a new DueDate: </label>
+      <input type="date" name="list[duedate]" class="form-control"  value="<%= List.duedate ? List.duedate.toISOString().split('T')[0] : '' %>" style="display:block"  required>
+      <div class="valid-feedback">You can do this task!!</div>
+       <div class="invalid-feedback">Please add Duedate!!</div>
+      </div>
+     <div class="mb-3">
+       <button class="btn btn-outline-success" >Edit</button>
+     </div>
+    </form>
+    </div>
+    </div>
+</body>

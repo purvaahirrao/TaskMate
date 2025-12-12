@@ -1,0 +1,36 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+   <div class="row mt-3">
+    <div class="col-8 offset-2">
+  <h3>Add a New Task</h3>
+    <form method="post" action="/List" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+       <label for="title" class="form-label" >Task: </label>
+       <br>
+      <input type="text" name="list[title]" class="form-control" placeholder="enter task" required >
+      <div class="valid-feedback">You can do this task!! Keep it up</div>
+       <div class="invalid-feedback">Add a valid task!!</div>
+      </div>
+      <div class="mb-3">
+       <label for="description" class="form-label"  >Description: </label><br>
+      <textarea name="list[description]" class="form-control" placeholder="about task" row="4" required></textarea>
+       <div class="valid-feedback">looks Good!!</div>
+       <div class="invalid-feedback">Please write short discription!!</div>
+      </div>
+       <div class="mb-3">
+       <label for="image" class="form-label" >Upload Image: </label>
+      <input type="file" name="list[image]" class="form-control" style="display:block"  required>
+      <div class="valid-feedback">You can do this task!!</div>
+       <div class="invalid-feedback">Please add image!!</div>
+      </div>
+       <div class="mb-3">
+       <label for="duedate" class="form-label" >Enter a DueDate: </label>
+      <input type="date" name="list[duedate]" class="form-control" style="display:block"  required>
+      <div class="valid-feedback">You can do this task!!</div>
+       <div class="invalid-feedback">Please add Duedate!!</div>
+      </div>
+      <div class="mb-3"><button class="btn btn-outline-dark">Add</button></div>
+      </div>
+    </form>
+    </div>
+</body>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMate - Welcome</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9fb;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+      font-weight: normal;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+      gap: 12px;
+    }
+
+    .option-btn {
+      flex: 1 1 45%;
+      background: #f5f7fa;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 20px 10px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.2s;
+    }
+
+    .option-btn:hover {
+      border-color: #4a90e2;
+      background: #eef5ff;
+    }
+
+    .option-btn span {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .next-btn {
+      background: #4a90e2;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .next-btn:hover {
+      background: #357ab8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TaskMate</h1>
+    <h2>Welcome, User<br>Let's Get to Work</h2>
+    <p style="margin-bottom:20px; color:#666;">How will you use TaskMate?</p>
+
+    <div class="options">
+      <div class="option-btn">
+        <span>👥</span>
+        Team or Company
+      </div>
+      <div class="option-btn">
+        <span>🏠</span>
+        Personal or Home
+      </div>
+      <div class="option-btn">
+        <span>🎓</span>
+        Education
+      </div>
+    </div>
+
+    <button class="next-btn">Next →</button>
+  </div>
+</body>
+</html>
